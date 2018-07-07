@@ -4,6 +4,8 @@
 #include <FS.h>
 #include <EmbAJAX.h>
 
+#include "EmbAJAXExtensions.cpp"
+
 const int fanPin = D7;
 const char* ssid = "Grill Settings";
 const char* password = "barbeqool";
@@ -33,16 +35,8 @@ MAKE_EmbAJAXPage(page, "Settings", "",
   new EmbAJAXStatic("</b></p>"),
   new EmbAJAXStatic("Connection status: "),
   new EmbAJAXConnectionIndicator(),
-  new EmbAJAXStatic("<script type=\"text/javascript\">"
-  "var viewPortTag=document.createElement('meta');"
-  "viewPortTag.id=\"viewport\";"
-  "viewPortTag.name = \"viewport\";"
-  "viewPortTag.content = \"width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;\";"
-  "document.getElementsByTagName('head')[0].appendChild(viewPortTag);"
-  "</script>"),
-  new EmbAJAXStatic("<script type=\"text/javascript\">"
-  "document.querySelector('head').innerHTML += '<link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\"/>';"
-  "</script>")
+  new EmbAJAXStylesheet("style.css"),
+  new EmbAJAXViewport
 )
 
 // This is all you need to write for the page handler
