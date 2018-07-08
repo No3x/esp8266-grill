@@ -15,7 +15,7 @@ The UI is build with the library https://github.com/tfry-git/EmbAJAX which provi
 Some things were missing so I added a EmbAJAXStylesheet(const char* stylesheet) to load a stylesheet and EmbAJAXViewport to set the viewport size so it looks better on mobile devices.
 
 ## Peripherals
-There is a 5V DC brushless motor fan connected to a transistor. The arduino switches the transistor with 3.3V which connects GND and GND of the fan.
+There is a 5V DC brushless motor fan connected to a transistor. The arduino switches the transistor with 3.3V which connects GND and GND of the fan. It uses PWM to control the speed of the fan. 
 
 ## Problems
 - The fan rpm is not linear to the speed selected in the UI.
