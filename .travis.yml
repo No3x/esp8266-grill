@@ -25,5 +25,5 @@ install:
     - pip install -U platformio
     
 script:
-    - platformio ci -v --lib="." --board=$BOARD $EXTRAS
+    - platformio ci -v --board=$BOARD $EXTRAS --project-conf=platoformio.ini
 
