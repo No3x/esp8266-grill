@@ -23,7 +23,6 @@ env:
 
 install:
     - pip install -U platformio
-    
-script:
-    - platformio ci -v --board=$BOARD $EXTRAS --project-conf=platformio.ini
 
+script:
+    - platformio ci -v --lib="." --board=$BOARD $EXTRAS --project-conf=platformio.ini
