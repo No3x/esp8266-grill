@@ -18,8 +18,8 @@ cache:
         - "~/.platformio"
 
 env:
-    - BOARD=esp01 PLATFORMIO_CI_SRC=examples/SimpleLoggingESP8266
-    - BOARD=nodemcuv2 PLATFORMIO_CI_SRC=examples/SimpleLoggingESP8266
+    - BOARD=esp01 PLATFORMIO_CI_SRC=src/grill.ino
+    - BOARD=nodemcuv2 PLATFORMIO_CI_SRC=src/grill.ino
 
 install:
     - pip install -U platformio
